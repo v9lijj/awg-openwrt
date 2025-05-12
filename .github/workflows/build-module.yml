@@ -82,7 +82,7 @@ jobs:
           cp bin/targets/${{ matrix.config.target}}/${{ matrix.config.subtarget}}/packages/kmod-amneziawg_*.ipk artifacts/
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: amneziawg-packages
           path: artifacts/*.ipk
