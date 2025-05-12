@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       openwrt_version:
-        description: 'OpenWRT version (e.g. 23.05.5)'
+        description: 'OpenWRT version (e.g. v23.05.5)'
         required: true
-        default: '23.05.5'
+        default: 'v23.05.5'
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - tag: "23.05.5"
+          - tag: "v23.05.5"
             target: "mediatek/mt7622"
             subtarget: "xiaomi_redmi-router-ax6s"
             pkgarch: "aarch64_cortex-a53"
